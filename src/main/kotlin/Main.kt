@@ -1,15 +1,15 @@
-fun main(args: Array<String>) {
+fun main() {
 
     println("начало")
     val dice6 = Dice(6)
     val minimumForSuccess: Int = 5
 
-    val monsters = listOf<Monster>(Monster(), Monster())
+    val monsters = listOf(Monster(), Monster())
     val player = Player(15, 10, 100, 2, 4)
 
     var monsterCounter = monsters.size
     while (player.getXP() > 0 && monsterCounter > 0) {
-        monsters.forEach() {
+        monsters.forEach {
             if (player.getXP() > 0 && it.getXP() > 0) {
                 println("игрок напал на монстра")
                 battle(player, it, dice6, minimumForSuccess)
